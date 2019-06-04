@@ -36,7 +36,7 @@ namespace Ttxt1
         }
         static void txtData(string str)
         {
-            if (str.EndsWith(".txt")&&str.StartsWith("Data")&&str.Contains("_"))
+            if (str.EndsWith(".txt"))
             {
                 string[] arrayt = str.Split('/');
                 string[] nextarray = arrayt[arrayt.Length - 1].Split('.');

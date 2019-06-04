@@ -10,3 +10,5 @@
 *.svd
 Library/
 Temp/
+*.ide
+obj/
