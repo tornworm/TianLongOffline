@@ -18,6 +18,7 @@ namespace Ttxt1
         }
         static void OnPostprocessAllAssets(string[] importedAssets, string[] deletedAssets, string[] movedAssets, string[] movedFromAssetPaths)
         {
+            if (!AppConfig.DataImport) return;
             foreach (string str in importedAssets)
             {
 

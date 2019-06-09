@@ -1,4 +1,0 @@
-ID	Name	JJJ
-1	实时	dad 
-2	地点	da 
-3	地点的	das 
