@@ -12,6 +12,7 @@ Library/
 Temp/
 *.ide
 obj/
+Obj/
 Client/TianLong1/.vs/TianLong1/v15/Server/sqlite3/storage.ide-wal
 Client/TianLong1/.vs/TianLong1/v15/Server/sqlite3/db.lock
 Client/TianLong1/.vs/TianLong1/v15/Server/sqlite3/storage.ide-shm

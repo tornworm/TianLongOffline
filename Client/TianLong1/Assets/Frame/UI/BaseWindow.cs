@@ -4,7 +4,7 @@ using UnityEngine;
 using System.Reflection;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
-public abstract class BaseWindow : MonoBehaviour,IPointerClickHandler
+public abstract class BaseWindow : MonoBehaviour,IPointerClickHandler,IBaseUI
 {
 
     //窗口预制体所存在的路径
@@ -49,5 +49,10 @@ public abstract class BaseWindow : MonoBehaviour,IPointerClickHandler
     public virtual void OnPointerClick(PointerEventData eventData)
     {
        
+    }
+
+    public void GetGlobalMsg()
+    {
+        Debug.Log("接收到广播消息!");
     }
 }

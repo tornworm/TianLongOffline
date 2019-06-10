@@ -7,7 +7,7 @@ using UnityEngine.UI;
 /// 自定义UI组件
 /// </summary>
 
-public class UICreate
+public class SGUICreate
 {
 
     //自定义Text
@@ -22,14 +22,18 @@ public class UICreate
         GameObject UItext = new GameObject("MyText");
         UItext.transform.parent=GameObject.FindGameObjectWithTag("UI").transform;
         UItext.transform.localPosition = Vector3.zero;
-        UItext.AddComponent<Text>();
+        UItext.AddComponent<Button>();
         Text MyText = UItext.GetComponent<Text>();
         MyText.fontSize = 30;
         MyText.text = "Gay里Gay气";
         MyText.raycastTarget = false;
     }
+
+
     //自定义Slider
-    [MenuItem("SGUI/Slider", false, 2)]
+    
+    // [MenuItem("Window/Test/yusong")]
+      [MenuItem("SGUI/Slider", false, 2)]
     private static void MyCreateSlider()
     {
         if (GameObject.FindGameObjectWithTag("UI") == null)
