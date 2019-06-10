@@ -2,7 +2,7 @@
 using UnityEngine;
 
 /*事件控制器，负责管理游戏中基于事件机制的所有逻辑*/
-public class EventController : MonoBehaviour
+public class EventController : BaseController
 {
     //唯一实例
     public static EventController sInstance = null;

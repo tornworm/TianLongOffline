@@ -7,5 +7,5 @@ using UnityEngine;
 /// </summary>
 public interface IBaseUI  {
 
-    void GetGlobalMsg();
+    //void GetGlobalMsg(BroadMessage broadMessage);
 }

@@ -9,6 +9,7 @@ public class testBtn :MonoBehaviour{
         GetComponent<Button>().onClick.AddListener(SendMessage);
     }
 
+
     void SendMessage()
     {
         Event a = new Event();
