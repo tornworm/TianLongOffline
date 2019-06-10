@@ -20,6 +20,7 @@ public class UIManager {
         if (GameObject.Find(name) != null)
         {
             return;
+
         }
         GameObject tmp = Object.Instantiate(Resources.Load("Prefabs/UI/" + name)) as GameObject;
     }
