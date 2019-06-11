@@ -19,7 +19,7 @@ public class ResourcesT  {
     }
     public static Sprite LoadSprite(string path)
     {
-      return  Resources.Load(path, typeof(Sprite)) as Sprite
+        return Resources.Load(path, typeof(Sprite)) as Sprite;
     }
 
 }
