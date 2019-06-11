@@ -11,22 +11,22 @@ public class UI_StoreMainPanel1Card : MonoBehaviour {
     private string image;//字典中的图片路径
     private Text goldText;
     private  Image iconImage;
- 
-     
+
+
     private void Start()
     {
-       
+
         id = int.Parse(name);
         goldText = transform.Find("gold").GetComponent<Text>();
         iconImage = transform.GetChild(1).GetComponent<Image>();
 
-        gold = BagModel.Singleton.BagGemDic[id].gold;
-        image = BagModel.Singleton.BagGemDic[id].image;
-        Debug.Log(iconImage+"..."+iconImage.sprite);
-        
-        iconImage.sprite = ResourcesT.LoadSprite(image)  ;
-         
-        goldText.text = gold+"";
-    }
+            gold = BagModel.Singleton.BagGemDic[id].gold;
+            image = BagModel.Singleton.BagGemDic[id].image;
 
+
+          iconImage.sprite = ResourcesT.LoadSprite(image)  ;
+
+          goldText.text = gold+"";
+        }
+    
 }
