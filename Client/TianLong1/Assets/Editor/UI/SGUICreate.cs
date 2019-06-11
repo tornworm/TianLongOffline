@@ -20,7 +20,7 @@ public class SGUICreate
             return;
         }
         GameObject UItext = new GameObject("MyText");
-        UItext.transform.parent=GameObject.FindGameObjectWithTag("UI").transform;
+        UItext.transform.parent = GameObject.FindGameObjectWithTag("UI").transform;
         UItext.transform.localPosition = Vector3.zero;
         UItext.AddComponent<Button>();
         Text MyText = UItext.GetComponent<Text>();
@@ -31,9 +31,9 @@ public class SGUICreate
 
 
     //自定义Slider
-    
+
     // [MenuItem("Window/Test/yusong")]
-      [MenuItem("SGUI/Slider", false, 2)]
+    [MenuItem("SGUI/Slider", false, 2)]
     private static void MyCreateSlider()
     {
         if (GameObject.FindGameObjectWithTag("UI") == null)
@@ -45,7 +45,7 @@ public class SGUICreate
 
         UISlider.transform.parent = GameObject.FindGameObjectWithTag("UI").transform;
         UISlider.transform.localPosition = Vector3.zero;
-       
+
         UISlider.AddComponent<Slider>();
         UISlider.GetComponent<RectTransform>().sizeDelta = new Vector2(500, 50);
 
@@ -118,15 +118,64 @@ public class SGUICreate
 
 
         //设置组件
-        UIViewContent.AddComponent<GridLayoutGroup>();
-        GridLayoutGroup ContentGrid = UIViewContent.GetComponent<GridLayoutGroup>();
-        ContentGrid.padding.left = 20;
-        ContentGrid.padding.top = 20;
-        ContentGrid.cellSize = new Vector2(200, 200);
-        ContentGrid.spacing = new Vector2(40, 40);
-        UIViewContent.AddComponent<ContentSizeFitter>();
-        ContentSizeFitter ContentFitter = UIViewContent.GetComponent<ContentSizeFitter>();
-        ContentFitter.verticalFit = ContentSizeFitter.FitMode.PreferredSize;
+
+
+    }
+
+    //自定义Image组件
+    [MenuItem("SGUI/Image", false, 4)]
+    private static void MyCreateImage()
+    {
+        if (GameObject.FindGameObjectWithTag("UI") == null)
+        {
+            Debug.LogError("没有Tag为UI的Canvas");
+            return;
+        }
+        //设置物体
+        GameObject UIImage = new GameObject("MyImage");
+        //设置物体初始位置
+        UIImage.transform.parent = GameObject.FindGameObjectWithTag("UI").transform;
+        UIImage.transform.localPosition = Vector3.zero;
+
+        //设置组件
+        UIImage.AddComponent<RectTransform>();
+        UIImage.AddComponent<CanvasRenderer>();
+        UIImage.AddComponent<Image>();
+        //UIImage.AddComponent<Button>();
+    }
+
+    //自定义Dropdown //
+    [MenuItem("SGUI/Dropdown", false, 5)]
+    private static void MyCreateDropdown()
+    {
+        if (GameObject.FindGameObjectWithTag("UI") == null)
+        {
+            Debug.LogError("没有Tag为UI的Canvas");
+            return;
+        }
+        //设置物体
+        GameObject UIDropdown = new GameObject("MyDropdown");
+        UIDropdown.transform.parent = GameObject.FindGameObjectWithTag("UI").transform;
+        UIDropdown.transform.localPosition = Vector3.zero;
+        UIDropdown.AddComponent<RectTransform>();
+        UIDropdown.AddComponent<Image>();
+        UIDropdown.AddComponent<CanvasRenderer>();
+        UIDropdown.AddComponent<Dropdown>();
+
+        GameObject MyLabel = new GameObject("Label");
+        MyLabel.transform.parent = UIDropdown.transform;
+        MyLabel.AddComponent<RectTransform>();
+        MyLabel.AddComponent<CanvasRenderer>();
+        MyLabel.AddComponent<Text>();
+        MyLabel.transform.localPosition = Vector3.zero;
+
+        GameObject MyArrow = new GameObject("Arrow");
+        MyArrow.AddComponent<RectTransform>();
+        MyArrow.AddComponent<CanvasRenderer>();
+        MyArrow.AddComponent<Image>();
+        MyArrow.transform.localPosition = Vector3.zero;
+
+
 
     }
 }
