@@ -11,7 +11,8 @@ public class SGUICreate
 {
 
     //自定义Text
-    [MenuItem("SGUI/Text", false, 1)]
+     [MenuItem("SGUI/Text", true, 1)]
+    
     private static void MyCreateText()
     {
         if (GameObject.FindGameObjectWithTag("UI") == null)

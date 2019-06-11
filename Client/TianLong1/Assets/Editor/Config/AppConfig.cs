@@ -11,12 +11,12 @@ public class AppConfig  {
     private static void OpenDataImport()
     {
         DataImport = true;
-        Debug.Log("开启文件自动导入!");
+        DebugT.Log("开启文件自动导入!");
     }
     [MenuItem("Config/CloseDataImport", false, 1)]
     private static void CloseDataImport()
     {
-        Debug.Log("关闭文件自动导入!");
+        DebugT.Log("关闭文件自动导入!");
         DataImport = false;
     }
 }
