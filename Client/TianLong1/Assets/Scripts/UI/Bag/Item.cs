@@ -26,6 +26,7 @@ public class Item
 
 
     }
+    public Item() { }
     public Item(string name, int gold, int count, string image)
     {
         this.name = name;

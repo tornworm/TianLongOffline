@@ -13,4 +13,10 @@ public class gem : Item {
         name = "1";
         gold = 1;
     }
+    public gem(int level,string name,int gold)
+    {
+        this.level = level;
+        this.name = name;
+        this.gold = gold;
+    }
 }

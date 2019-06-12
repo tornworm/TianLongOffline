@@ -1,8 +1,5 @@
 ﻿using UnityEngine.EventSystems;
-public class Text : UnityEngine.UI.Text, IPointerEnterHandler
+public class Text : UnityEngine.UI.Text
 {
-    public void OnPointerEnter(PointerEventData eventData)
-    {
-        DebugT.Log("ddd");
-    }
+  
 }
