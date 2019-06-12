@@ -1,18 +1,13 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.EventSystems;
+
 
 public class UI_StoreMain : BaseWindow
 {
-
     public UI_StoreMain() : base("Store/UI_StoreMain")
     {
 
     }
-   // private Text title = null;//标题文本
-   // private Button backBtn = null;//返回
-
     
 
     private GameObject panel1 = null;//购买界面
@@ -41,9 +36,9 @@ public class UI_StoreMain : BaseWindow
         tabImg.Add(tabImg2);
         SetTab(1);
     }
-    public override void OnPointerClick(PointerEventData eventData)
+    public override void OnPointerClick(UnityEngine.EventSystems.PointerEventData eventData)
     {
-        DebugT.Log(1);
+       
         if (eventData.pointerEnter.name == "purchaseBtn")
         {
             SetTab(0);

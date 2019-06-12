@@ -17,6 +17,7 @@ public abstract class BaseWindow : MonoBehaviour,IPointerClickHandler,IBaseUI
     {
         this.path = path;
     }
+  
     //构造标准界面
     public BaseWindow(string path,int panelCount)
     {
